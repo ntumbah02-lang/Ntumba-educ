@@ -1,0 +1,5 @@
+[
+  {"id":1,"title":"Intelligence Artificielle","learners":1250,"rating":4.9,"price_tiers":"$3-$149"},
+  {"id":2,"title":"Génie Informatique","learners":980,"rating":4.8},
+  {"id":3,"title":"Python Data Science","learners":750,"rating":4.7}
+]
