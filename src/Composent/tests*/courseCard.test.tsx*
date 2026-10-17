@@ -1,0 +1,8 @@
+import { render, screen } from '@testing-library/react'
+import CourseCard from '../CourseCard'
+
+test('renders course title', () => {
+  render(<CourseCard title="Maths" level="Primaire" students={10} />)
+  expect(screen.getByText('Maths')).toBeInTheDocument()
+  expect(screen.getByText(/étudiants/)).toBeInTheDocument()
+})
