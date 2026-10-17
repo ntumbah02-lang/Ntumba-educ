@@ -1,19 +1,27 @@
-"use client";
-import { useState } from "react";
-export default function NtumbaEduc(){
-  const courses = [
-    {title:"Intelligence Artificielle", desc:"Machine learning, deep learning", level:"Débutant à Avancé", dur:"12 semaines"},
-    {title:"Génie Informatique", desc:"Architecture, réseaux, sécurité", level:"Débutant à Avancé", dur:"16 semaines"},
-    {title:"Python Data Science", desc:"Pandas, NumPy, visualisation", level:"Intermédiaire", dur:"14 semaines"},
-    {title:"Web Full-Stack", desc:"React, Node.js, DB", level:"Intermédiaire", dur:"14 semaines"},
-    {title:"Cybersécurité", desc:"Ethical hacking", level:"Avancé", dur:"10 semaines"},
-  ];
+import CourseCard from './components/CourseCard'
+
+const courses = [
+  { id: 1, title: 'Mathématiques', level: 'Primaire', students: 120 },
+  { id: 2, title: 'Français', level: 'Secondaire', students: 85 },
+  { id: 3, title: 'Informatique', level: 'Université', students: 200 },
+]
+
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white p-4 shadow">🎓 Ntumba Éduc - 10,000+ apprenants - 4.9/5</header>
-      <section className="p-8 bg-white"><h1 className="text-4xl font-bold">Apprenez, Grandissez et Réussissez</h1></section>
-      <section className="grid md:grid-cols-2 gap-4 p-6">{courses.map(c=><div className="bg-white p-4 rounded-xl border"><h3 className="font-bold">{c.title}</h3><p className="text-xs">{c.desc}</p></div>)}</section>
-      <footer className="bg-emerald-900 text-white p-6 text-xs text-center">© Ntumba Éduc - Kinshasa RDC - +243 810 649 049</footer>
-    </div>
+    <main className="min-h-screen bg-gray-50 p-8">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold">Ntumba-educ</h1>
+        <p className="text-gray-600 mt-2">Plateforme éducative RDC - Kinshasa</p>
+      </header>
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {courses.map((course) => (
+          <CourseCard key={course.id} {...course} />
+        ))}
+      </section>
+      <section className="mt-12">
+        <h2 className="text-2xl font-semibold">Statistiques</h2>
+        <p className="mt-2">Total étudiants: {courses.reduce((s, c) => s + c.students, 0)}</p>
+      </section>
+    </main>
   )
 }
