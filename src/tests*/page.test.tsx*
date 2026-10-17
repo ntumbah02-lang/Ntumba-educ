@@ -1,0 +1,7 @@
+import { render, screen } from '@testing-library/react'
+import Page from '../page'
+
+test('renders Ntumba-educ header', () => {
+  render(<Page />)
+  expect(screen.getByText('Ntumba-educ')).toBeInTheDocument()
+})
