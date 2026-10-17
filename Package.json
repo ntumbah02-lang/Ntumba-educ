@@ -1,0 +1,6 @@
+{
+  "name": "ntumba-educ",
+  "version": "1.0.0",
+  "description": "AI-powered learning platform for Africa - 10k+ learners",
+  "main": "src/page.tsx"
+}
