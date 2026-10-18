@@ -105,7 +105,14 @@ export default function HomePage() {
             <a href="#temoignages">Témoignages</a>
           </nav>
 
-          <button className="btn btn-primary">Commencer</button>
+          <div className="header-actions">
+            <a className="link-btn" href="/login">
+              Connexion
+            </a>
+            <a className="btn btn-primary" href="/dashboard">
+              Commencer
+            </a>
+          </div>
         </header>
 
         <section className="hero">
@@ -118,8 +125,12 @@ export default function HomePage() {
             </p>
 
             <div className="cta-row">
-              <button className="btn btn-primary large">S’inscrire</button>
-              <button className="btn btn-secondary large">Découvrir les cours</button>
+              <a className="btn btn-primary large" href="/login">
+                S’inscrire
+              </a>
+              <a className="btn btn-secondary large" href="#programmes">
+                Découvrir les cours
+              </a>
             </div>
 
             <div className="mini-trust">
@@ -231,9 +242,9 @@ export default function HomePage() {
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>
-                <button className={`btn ${plan.highlight ? 'btn-primary' : 'btn-secondary'}`}>
+                <a className={`btn ${plan.highlight ? 'btn-primary' : 'btn-secondary'}`} href="/login">
                   Choisir
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -321,7 +332,28 @@ export default function HomePage() {
           color: #111827;
         }
 
+        .header-actions {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .link-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 11px 14px;
+          font-weight: 700;
+          color: #111827;
+          border: 1px solid #dfe5ef;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.6);
+        }
+
         .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
           border-radius: 12px;
           padding: 12px 18px;
           font-weight: 700;
