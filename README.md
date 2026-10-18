@@ -1,8 +1,7 @@
 # Ntumba-educ
 
-Plateforme educative open-source pour la RDC.
+Plateforme éducative Next.js / TypeScript pour l'apprentissage en RDC.
 
 ## Installation
 ```bash
 npm ci
-npm run dev
