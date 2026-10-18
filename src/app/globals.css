@@ -1,0 +1,11 @@
+/* Global styles minimal — app can keep using styled-jsx in pages */
+:root{
+  --bg: #f7f9ff;
+  --text: #101828;
+}
+
+html,body,#__next{height:100%;}
+body{margin:0;background:linear-gradient(180deg,#f7f9ff 0%,#eef4ff 100%);color:var(--text);font-family: 'Segoe UI', Tahoma, sans-serif;}
+
+a{color:inherit}
+
